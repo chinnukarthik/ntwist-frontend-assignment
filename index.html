@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive form with vaidation</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+
+      <aside class="content">
+        <h2>Form Validation</h2>
+        <!-- Nav Bar -->
+        <nav>
+          <a href="index.html">Form</a>
+          <a href="sort.html">Sort List</a>
+          <a href="faq.html">FAQ</a>
+        </nav>
+      </aside>
+      <!-- Form content -->
+      <main class="main">
+        <form id="form">
+          <label>Name: <input type="text" name="name" required placeholder="Enter your name" /></label>
+          <label>Email: <input type="email" name="email" placeholder="Enter your E-mail" required /></label>
+          <label>Message: <textarea name="message" minlength="10" placeholder="Message" required></textarea></label>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <p id="confirmation" class="hidden">Message has been sent.</p>
+        <p id="timer"></p>
+
+        <!--Star Rating section -->
+        <div class="rating">
+          <label for="rating">Rate Us</label>
+            <div class="stars">
+                <input type="radio" name="rating" id="star5">
+                <label  for="star5" >★</label>
+                <input type="radio" name="rating" id="star4">
+                <label  for="star4" >★</label>
+                <input type="radio" name="rating" id="star3">
+                <label  for="star3" >★</label>
+                <input type="radio" name="rating" id="star2">
+                <label  for="star2" >★</label>
+                <input type="radio" name="rating" id="star1">
+                <label  for="star1" >★</label>
+            </div>
+        </div>
+      </main>
+    </div>
+
+  
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,247 @@
+/* Global Properties */
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     text-decoration: none;
+}
+body{
+    font-family: tahoma,sans-serif;
+    background: linear-gradient(to right #a6d7de,white);
+    color:#333;
+    min-height: 100vh;
+    line-height: 0.5;
+    padding: 1.5em;
+}
+/* Container  */
+.container{
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgb(0, 0, 0,0.1);
+    background: white;
+}
+
+/* Side Nav Bar  */
+aside.content{
+    background: #00796b;
+    color: white;
+    padding: 1.5em;
+    min-width: 200px;
+}
+aside.content h2{
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+aside nav a{
+    display: block;
+    color: white;
+    margin: 0.5em 0;
+    padding: 0.5em;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+
+}
+aside nav a:hover{
+    background-color: #004d40;
+}
+
+
+/* Main  */
+main {
+    flex:1;
+    padding: 2em;
+    margin-left:5rem;
+}
+main h1{
+    color: #00796b;
+    margin-bottom: 1em;
+}
+/* Form Section  */
+form {
+    display: grid;
+    grid-template-columns: 2fr;
+    gap:1em;
+    max-width: 600px;
+    margin:0 auto;
+}
+form label{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    color:#444;
+    margin-bottom: 0.5em;
+}
+input,textarea{
+    padding: 0.7em 1em;
+    margin-top: 0.8em;
+    border: 1px solid #dcdbdb;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+}
+textarea{
+    resize: vertical;
+    min-width: 100px;
+}
+button{
+    background-color: #00796b;
+    color: white;
+    border: none;
+    width: fit-content;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #004d40;
+}
+.submit-button{
+    padding:0.5em 7em
+}
+.sort-button{
+    padding: 0.5em 1.2em;
+}
+
+
+/* Hidden class additional class */
+.hidden{
+    display: none;
+}
+
+/* Star rating */
+.rating{
+    margin-left: 4.5em;
+}
+.stars{
+    display: flex;
+    flex-direction: row-reverse;
+    gap:0.5em;
+    justify-content: flex-end;
+    margin-top: 1em;
+}
+.stars input{
+    display: none;
+}
+.stars label{
+    font-size: 2em;
+    color:#e2e1e1;
+    cursor: pointer;
+    transition: color 0.3;
+}
+.stars input:checked ~label,
+.stars input:hover,
+.stars input:hover ~label{
+    color: gold;
+}
+
+
+/* Sorting List  */
+ul#names{
+    list-style: none;
+    margin-bottom: 1em;
+}
+ul#names li{
+    background-color: #f1f8e9;
+    padding: 0.7em 1em;
+    margin-bottom: 0.5em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+ul#names li:hover{
+    background-color: #dcedc8;
+}
+
+/* Confirmation message  */
+#confirmation{
+    margin-top: 1em;
+    padding: 1em;
+    background: #d0f8ce;
+    border-left: 5px solid #388e3c;
+    display: none;
+    border-radius: 5px;
+    color: #2e7d32;
+}
+
+/* Time Stamp */
+#timer{
+    font-size: 0.9em;
+    margin:1em 0;
+    color:#9a9898;
+    line-height: 1;
+}
+
+@media (min-width:310px) and (max-width:600px){
+    main{
+        margin-left:0;
+    }
+    .container{
+        flex-direction: column;
+        padding: 1em;
+    }
+    aside.content{
+        min-width: 100%;
+        text-align: center;
+    }
+    aside nav a{
+        padding: 0.4em;
+        font-size: 1em;
+    }
+    main{
+        padding: 1em;
+    }
+    form{
+        grid-template-columns: 1fr;
+        padding: 0.5em;
+    }
+    .rating,.stars{
+        margin-left:0;
+        justify-content: center;
+    }
+    .submit-button{
+        padding: 0.5em 3em;
+    }
+}
+@media (min-width:601px) and (max-width:768px){
+     main{
+        margin-left:0;
+    }
+    .container{
+        flex-direction: column;
+    }
+    aside.content{
+        min-width: 100%;
+        text-align: center;
+    }
+    form{
+        grid-template-columns:1fr;
+    }
+    .rating{
+        margin-left:2em;
+    }
+    .stars{
+        justify-content: flex-end;
+    }
+    .submit-button{
+        padding: 0.5em 5em;
+    }
+}
+@media (min-width:769px)and  (max-width:1024px){
+    .container{
+        max-width: 95%
+    };
+    aside.content{
+        min-width: 240px;
+    }
+    main{
+        padding: 2em;
+    }
+    .submit-button{
+        padding: 0.3em 6em;
+    }
+}

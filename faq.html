@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <style>
+     .accordion{
+        max-width: 700px;
+        margin: 2px auto;
+        padding: 0.5em 1em;
+     }
+     .accordion details{
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 1em;
+        padding: 1em;
+        box-shadow: 0 4px 8px rgb(0,0,0,0.1);
+        transition: box-shadow 0.3s ease;
+     }
+     .accordion details:hover{
+        box-shadow: 0 16px 12px rgb(0,0,0,0.05);
+     }
+     .accordion summary{
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        color:#00796b;
+        outline: none;
+        position: relative;
+        padding-right: 1.5em;
+        line-height: 1;
+    }
+    .accordion p{
+        margin-top: 1.2em;
+        color:#696868;
+        line-height: 1.5;
+    }
+    @media (min-width:320px) and (max-width:600px){
+        .accordion{
+            max-width: 95%;
+            padding: 0.5em;
+        }
+        .accordion summary{
+            font-size: 1em;
+        }
+        .accordion p{
+            font-size: 0.9em;
+        }
+    }
+    @media (min-width:601px) and (max-width:768px){
+        .accordion{
+            max-width: 90%;
+            padding: 0.8em;
+        }
+        .accordion summary{
+            font-size: 1.1em;
+        }
+        .accordion p{
+            font-size: 1em;
+        }
+
+    }
+    @media (min-width:769px) and (max-width:1024px){
+        .accordion{
+            max-width: 80%;
+            padding: 1em;
+        }
+        .accordion summary{
+            font-size: 1.2em;
+        }
+        .accordion p{
+            font-size: 1.2em;
+        }
+    }
+    </style>
+    <div class="accordion">
+        <details>
+            <summary>What is Web development?</summary>
+            <p>Web development is the process of building and maintaining websites.</p>
+        </details>
+        <details>
+            <summary>what is Full Stack development?</summary>
+            <p>Full stack development is building both frontend and backend systems</p>
+        </details>
+        <details>
+            <summary>What is MERN Stack development?</summary>
+            <p>The MERN stack is a full-stack JavaScript-based web development framework that simplifies and streamlines the creation of modern web applications</p>
+        </details>
+    </div>
+</body>
+</html>
